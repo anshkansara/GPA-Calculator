@@ -1,0 +1,39 @@
+#main {
+  text-align: center;
+  border-style: solid;
+  width: 768px;
+  margin: auto;
+  border-radius: 75px;
+  background-color: rgb(255, 218, 176);
+}
+
+#instructions {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+body {
+  background-color: rgb(255, 102, 102);
+  background-image: url("Background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (min-width: 750px) {
+  #main {
+    width: 768px;
+  }
+}
+
+@media (max-width: 600px) {
+  #main {
+    width: 500px;
+  }
+}
+
+/*Colour combos:
+background-color: rgb(255, 218, 176);
+background-color: rgb(255, 102, 102);
+
+background-color: rgb(179, 218, 255);
+background-color: rgb(230, 179, 255);
