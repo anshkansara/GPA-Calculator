@@ -13,5 +13,5 @@ Main upgrades over the current one found on the York site:
 
 INSTRUCTIONS ON HOW TO RUN CALCULATOR:
 
-Download Calculator.html, Calculator.js, Calculator.html, and background.jpg (optional). Save them all in the same folder. Double click Calculator.html. Instructions on how to use the calculator can be found on the calculator page. 
+Download Calculator.html, Calculator.js, Calculator.css, and background.jpg (optional). Save them all in the same folder. Double click Calculator.html. Instructions on how to use the calculator can be found on the calculator page. 
 
