@@ -5,7 +5,7 @@ https://laps.yorku.ca/student-resources/gpa-calculator/.
 
 Main upgrades over the current one found on the York site:
 
-1. Save/load feature using localstorage. This saves tons of time not having to input each course manually. Especially useful in upper years.
+1. Save/load courses and grades feature using localstorage. This saves tons of time not having to input each course manually. Especially useful in upper years.
 
 2. Calculate 3 GPAs at once: overall cumulative GPA, major specific GPA, and a custom GPA using a subset of all your courses. Especially useful when eligibility for certain programs, awards, etc. depends on different GPAs. User can also repurpose "major" GPA into a second custom GPA if desired.
 
