@@ -11,7 +11,7 @@ Main upgrades over the current one found on the York site:
 
 3. Increased course input slots. Specifically useful for engineers who take 150 credits (at an average of 3 credits per course, the current calculator accommodates only 40x3=120 credits). 
 
-INSTRUCTIONS ON HOW TO RUN:
+INSTRUCTIONS ON HOW TO RUN CALCULATOR:
 
 Download Calculator.html, Calculator.js, Calculator.html, and background.jpg (optional). Save them all in the same folder. Double click Calculator.html. Instructions on how to use the calculator can be found on the calculator page. 
 
