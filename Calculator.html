@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>York GPA Calculator</title>
+  <meta charset="UTF=8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="Calculator.css" rel="stylesheet" type="text/css">
+  <script src="Calculator.js"></script>
+</head>
+<body>
+  <div id="main">
+  <h1> GPA Calculator </h1>
+  <h2> How to use: </h2>
+  <div id="instructions"> <p> Input your data below. The name/code of the course is optional, but recommended.<br>
+  Enter the credit weight of that course (3 credits for most one-semester courses).<br>
+  Enter your letter grade (F-A+. You can also enter P, but this does not affect your GPA).<br>
+  Tick the first box if the course is within your major, i.e. EECS courses for Computer Science majors.
+  This will count that course in your "Major GPA".<br>
+  Tick the second box if you would like the course to count towards a custom GPA,
+  e.g. to calculate EECS+Math GPA to determine Co-op/Internship eligibility.
+  This will count that course in your "Custom GPA".<br>
+  "Save" will store all currently inputted data in your local storage.<br>
+  <strong> WARNING: Clearing your browser's cookies and/or cache will ERASE your saved data. </strong><br>
+  "Load" will fill in the calcualtor using data previously stored locally.<br>
+  <strong> WARNING: When loading previously saved data, current inputted data will be LOST. </strong><br>
+  <h3> NOTE: Correctness of results is not guaranteed if these instructions are not followed.
+  <strong> Please double check your inputs when using the calculator. </strong></h3>
+  </p>
+  </div>
+  <p>
+  <button type="button" onclick="myFunc()">Calculate</button>
+  <button type="button" onclick="saveFunc()">Save</button>
+  <button type="button" onclick="loadFunc()">Load</button></p>
+  <p id="answer1">Overall CGPA: </p>
+  <p id="answer2">Major GPA:</p>
+  <p id="answer3">Custom GPA:</p>
+  <p> Note: Above GPAs are according to York's 9-point grading scale. </p>
+  <p> <strong>Format:</strong> Course (Optional) | Credit Weight | Your Letter Grade | Major Course? | Custom Course? </p>
+  <p> 01. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p>
+  <p>
+  02. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  03. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  04. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  05. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  06. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  07. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  08. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  09. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  10. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  11. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  12. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  13. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  14. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  15. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  16. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  17. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  18. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  19. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  20. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  21. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  22. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  23. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  24. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  25. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  26. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  27. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  28. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  29. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  30. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  31. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  32. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  33. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  34. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  35. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  36. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  37. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  38. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  39. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  40. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  41. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  42. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  43. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  44. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  45. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  46. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  47. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  48. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  49. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  50. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  51. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  52. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  53. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  54. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  55. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  56. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  57. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  58. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  59. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p><p>
+  60. <input type="text" name="course">
+  <input type="text" name="credits" size="5">
+  <input type="text" name="letter" size="5">
+  <input type="checkbox" name="majorBox" value="Major">
+  <input type="checkbox" name="customBox" value="Custom"></p>
+  </div>
+</body>
+</html>
