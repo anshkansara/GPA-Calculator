@@ -151,9 +151,13 @@ function myFunc() {
     cCreds = 1;
   }
 
-  document.getElementById('answer1').innerHTML = "Overall CGPA: " + (parseFloat(oGradeSum)/oCreds).toFixed(2);
-  document.getElementById('answer2').innerHTML = "Major GPA: " + (parseFloat(mGradeSum)/mCreds).toFixed(2);
-  document.getElementById('answer3').innerHTML = "Custom GPA: " + (parseFloat(cGradeSum)/cCreds).toFixed(2);
+  var OCGPA = Math.round((parseFloat(oGradeSum)/oCreds) * 100) / 100
+  var MCGPA = Math.round((parseFloat(mGradeSum)/mCreds) * 100) / 100
+  var CCGPA = Math.round((parseFloat(cGradeSum)/cCreds) * 100) / 100
+
+  document.getElementById('answer1').innerHTML = "Overall CGPA: " + OCGPA;
+  document.getElementById('answer2').innerHTML = "Major GPA: " + MCGPA;
+  document.getElementById('answer3').innerHTML = "Custom GPA: " + CCGPA;
 }
 
 function saveFunc() {
