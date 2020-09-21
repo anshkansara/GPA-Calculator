@@ -1,4 +1,6 @@
 # GPA-Calculator
+Click this link to visit calculator page: https://anshkansara.github.io
+
 Slightly upgraded version of York's GPA Calculator, which can be found at:
 
 https://laps.yorku.ca/student-resources/gpa-calculator/.
